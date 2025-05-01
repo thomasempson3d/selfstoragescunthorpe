@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="description"
+        content="isoV8® – Bespoke Shipping Container Conversions by ContainerKing®. UK specialists in container conversion and modification." />
+  <title>isoV8® – Bespoke Shipping Container Conversions</title>
+
+  <style>
+    :root{
+      --primary:#45a29e;--primary-dark:#379392;
+      --text:#212529;--heading:#333;--light-bg:#ffffff;
+      --spacing-xs:.2rem;--spacing-sm:.5rem;--spacing-md:.9rem;--spacing-lg:1.4rem;
+      --border-radius:8px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;overflow-x:hidden;
+              font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif}
+
+    /* ------ split layout ------ */
+    body{display:flex;height:100vh}
+    .left-side{width:35%;min-width:320px;background:var(--light-bg);
+               padding:var(--spacing-lg);display:flex;overflow:hidden}
+    .right-side{flex:1;position:fixed;top:0;right:0;height:100vh;overflow:hidden}
+    .right-side img{width:100%;height:100%;object-fit:contain;object-position:center}
+
+    /* ------ column ------- */
+    .page-wrapper{max-width:460px;width:100%;margin:auto;display:flex;
+                  flex-direction:column;height:100%}
+    .header{display:flex;justify-content:center;margin-bottom:var(--spacing-xs)}
+    .logo{width:100%;height:auto}
+
+    /* UPDATED: Make content-inner scrollable with normal scrollbar */
+    .content-inner{
+      flex:1;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      overflow-y: auto;
+      padding-right: var(--spacing-sm);
+    }
+
+    .brand   {font:600 1.05rem/1 var(--font);text-align:center;margin:0}
+
+    /* UPDATED: Added margin to create space below the tagline */
+    .tagline {font-style:italic;font-size:1.6rem;text-align:center;
+              margin:0 0 var(--spacing-lg)}
+
+    h2       {font-size:1.3rem;color:var(--heading);text-align:center;
+              margin:var(--spacing-lg) 0 var(--spacing-md)}
+    p        {font-size:.9rem;line-height:1.4;text-align:center;}
+
+    /* NEW: Added extra gap between "without doubt" tagline and the next element */
+    .supplies-text { margin: calc(var(--spacing-lg) * 2) 0; }
+    
+    /* NEW: Added styling for the marketing copy */
+    .marketing-copy { 
+      text-align: left; 
+      margin: var(--spacing-lg) 0;
+      font-size: .9rem;
+      line-height: 1.4;
+    }
+    
+    .marketing-copy p {
+      text-align: left;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .marketing-copy ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .marketing-copy ul li {
+      position: relative;
+      padding-left: 1.1rem;
+      font-size: .9rem;
+      margin-bottom: var(--spacing-xs);
+      text-align: left;
+    }
+    
+    .marketing-copy ul li::before {
+      content: "• ";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    ul{list-style:none;padding:0;margin-bottom:var(--spacing-md)}
+    ul li{position:relative;padding-left:1.1rem;font-size:.9rem;
+          margin-bottom:var(--spacing-xs);text-align:left}
+    ul li::before{content:"✔️ ";position:absolute;left:0;color:#28a745}
+
+    /* --- customer logos & wrapper --- */
+    .customer-section{margin-top:var(--spacing-lg);margin-bottom:var(--spacing-lg);}
+    .logos{display:flex;flex-wrap:wrap;justify-content:center;
+           gap:var(--spacing-md);margin:var(--spacing-lg) 0}
+    .logo-item{width:120px;height:60px;display:flex;align-items:center;
+               justify-content:center;padding:var(--spacing-xs);
+               overflow:hidden;transition:transform .2s}
+    .logo-item:hover{transform:scale(1.05)}
+    .logo-item img{max-width:100%;max-height:100%;object-fit:contain}
+
+    .highlight{background:rgba(69,162,158,.1);
+               border-left:4px solid var(--primary);
+               padding:var(--spacing-sm);
+               border-radius:0 var(--border-radius) var(--border-radius) 0;
+               text-align:center;margin-top:var(--spacing-lg)}
+
+    .contact-info{margin-top:var(--spacing-sm);margin-bottom:var(--spacing-lg)}
+    .contact-info p{margin:0}
+
+    /* --- CTA button (updated with consistent spacing) --- */
+    .cta{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      margin-top:var(--spacing-lg);
+      margin-bottom:var(--spacing-lg);
+      padding-top:var(--spacing-lg);
+    }
+    
+    .button{
+      width:200px;
+      background:var(--primary);
+      color:#fff;
+      border:none;
+      padding:.5rem 1rem;
+      border-radius:var(--border-radius);
+      font-size:.85rem;
+      cursor:pointer;
+      transition:.2s;
+      text-align:center
+    }
+    
+    .button:hover{background:var(--primary-dark);transform:translateY(-2px)}
+
+    footer{font-size:.75rem;text-align:center;color:#666;margin-top:var(--spacing-xs)}
+
+    /* mobile */
+    @media(max-width:768px){
+      body{flex-direction:column}
+      .left-side{width:100%;order:2;height:auto;overflow:auto;
+                 padding:var(--spacing-lg)}
+      .right-side{position:relative;width:100%;order:1;height:240px}
+      .logo{max-width:240px}
+      .button{width:100%}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- text panel -->
+  <div class="left-side">
+    <div class="page-wrapper">
+      <div class="header">
+        <img src="ISOV8.svg" alt="isoV8 Logo" class="logo">
+      </div>
+
+      <div class="content-inner">
+        <div>
+          <p class="brand">Bespoke Shipping Container Conversions</p>
+          <p class="tagline">without doubt<sup>&reg;</sup></p>
+
+          <!-- ADDED class for the new gap -->
+          <p class="supplies-text">
+            ContainerKing<sup>&reg;</sup> supplies bespoke
+            shipping-container conversions nationwide: workshops, offices,
+            canteens, meeting rooms, gyms, podcast studios and more.
+          </p>
+
+          <div class="customer-section">
+            <h2>Trusted by customers across the UK:</h2>
+
+            <div class="logos">
+              <div class="logo-item"><a href="https://cheesecakeenergy.com/" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Cheesecake-1PwAOYL6WxRkDKwuhe2hD5zmvHSrmN.svg" alt="Cheesecake Energy"></a></div>
+              <div class="logo-item"><a href="https://www.cohortplc.com/" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Cohort%20PLC-jvoki1q0CqZQGJyN8ahaozK7FrhQfG.png" alt="Cohort PLC"></a></div>
+              <div class="logo-item"><a href="https://www.2sfg.com/" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2%20Sisters%20Food%20Group-lDoYPoHdubgF3QkKMQvKd1q8jTt6SD.png" alt="2 Sisters Food Group"></a></div>
+              <div class="logo-item"><a href="https://www.mrct.co.uk/" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MRCT%20Transport-6C3nVYFhiz8NVNdE8XDJYmw202sHjh.png" alt="MRCT Transport"></a></div>
+              <div class="logo-item"><a href="https://corporate.arcelormittal.com/" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ArcelorMittal-95oQY3ksjRpqY3MEBaFpUrPRlyJUy0.png" alt="ArcelorMittal"></a></div>
+              <div class="logo-item"><a href="https://www.jotun.com/ww-en" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jotun.jpg-MN5tWHDlHVrzaAAxhYdRY8g8dEKL2u.jpeg" alt="Jotun"></a></div>
+              <div class="logo-item"><a href="https://www.mondigroup.com/" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mondi-KXAKhpdGgwaEPEfRnwIC6xzmH1bqkK.png" alt="Mondi"></a></div>
+              <div class="logo-item"><a href="https://www.steris.com/" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Steris-x9pC0sKIncQtCvOSOcMDnu3s5oZWe0.svg" alt="Steris"></a></div>
+              <div class="logo-item"><a href="https://exolum.com/en/" target="_blank"><img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Exolium-IH8NFriNUNE3FoAZrYtyDrKtqkVwAV.png" alt="Exolum"></a></div>
+            </div>
+          </div><!-- /customer-section -->
+          
+          <!-- ADDED marketing copy AFTER the customer section -->
+          <div class="marketing-copy">
+            <p>Bespoke Shipping Container Conversions | ISOv8 by ContainerKing®</p>
+            <p>At ISOv8.co.uk, we design and manufacture bespoke shipping container conversions for businesses across the UK. As a specialist sub-brand of ContainerKing® Limited, we're proud to deliver high-quality portable buildings built from new and used ISO containers, tailored to the needs of forward-thinking organisations.</p>
+            <p>From our base in Scunthorpe, we regularly supply to clients across Lincolnshire, Yorkshire and Humberside, but we also serve businesses throughout England, Scotland, and Wales. Whether you're a local business or a national enterprise, we offer expert guidance, fast turnaround, and reliable UK-wide delivery.</p>
+            <p>We supply:</p>
+            <ul>
+              <li>Shipping container offices with full insulation, lining, and electric fit-outs</li>
+              <li>Customised workshops and canteens designed to meet daily operational needs</li>
+              <li>Acoustically treated and soundproofed containers for studios, therapy, or wellbeing spaces</li>
+              <li>Portable meeting rooms, training spaces, and modular classroom pods</li>
+              <li>Luxury interior finishes including high-spec fabrics, vinyl flooring, and LED lighting</li>
+              <li>Single-phase or three-phase electrics, custom sockets, and heating installations</li>
+              <li>Clad containers for enhanced appearance and insulation performance</li>
+            </ul>
+            <p>Our container buildings are ideal for entrepreneurs, SMEs, construction companies, education providers, wellness brands, and corporate HQs. Every unit is designed with durability, comfort, and professional appearance in mind.</p>
+            <p>Google Search Terms: shipping container conversions UK, portable buildings for sale, container offices, converted shipping containers, container meeting rooms, modular site buildings, Scunthorpe portable buildings, Yorkshire container conversions, Lincolnshire shipping containers, Humberside portable offices, soundproof container rooms, acoustic container studios, bespoke site cabins, luxury portable workspace, high-spec container conversion.</p>
+          </div>
+          
+          <!-- MOVED highlight and contact info below marketing copy -->
+          <div class="highlight">
+            <p>⚡ <strong>Brand-new website coming soon</strong></p>
+            <p>We're working on something exciting. In the meantime, we're here
+               and ready to help with your container-conversion needs.</p>
+          </div>
+
+          <div class="contact-info">
+            <p>📞 Any questions, or do you have a project in mind?</p>
+          </div>
+        </div>
+
+        <!-- CTA & footer remain untouched but with improved spacing -->
+        <div class="cta">
+          <a href="tel:01724870000" class="button">Call 01724 870000</a>
+        </div>
+      </div>
+
+      <footer>&copy; 2025 ContainerKing® Limited. All rights reserved.</footer>
+    </div>
+  </div>
+
+  <!-- image panel -->
+  <div class="right-side">
+    <img src="bg.jpg" alt="isoV8 Container Conversion">
+  </div>
+</body>
+  <!-- Hidden SEO content – off-screen, so it has zero effect on layout -->
+  <div style="position:absolute; left:-9999px; top:-9999px;">
+
+    <h1>Bespoke Shipping Container Conversions | ISOv8 by ContainerKing®</h1>
+
+    <p>At <strong>ISOv8.co.uk</strong>, we design and manufacture <strong>bespoke shipping container conversions</strong> for businesses across the UK. As a specialist sub-brand of <strong>ContainerKing® Limited</strong>, we’re proud to deliver <strong>high-quality portable buildings</strong> built from <strong>new and used ISO containers</strong>, tailored to the needs of forward-thinking organisations.</p>
+
+    <p>From our base in <strong>Scunthorpe</strong>, we regularly supply to clients across <strong>Lincolnshire, Yorkshire and Humberside</strong>, but we also serve businesses throughout <strong>England, Scotland, and Wales</strong>. Whether you’re a local business or a national enterprise, we offer expert guidance, fast turnaround, and reliable UK-wide delivery.</p>
+
+    <p>We supply:</p>
+    <ul>
+      <li><strong>Shipping container offices</strong> with full insulation, lining, and electric fit-outs</li>
+      <li><strong>Customised workshops and canteens</strong> designed to meet daily operational needs</li>
+      <li><strong>Acoustically treated and soundproofed containers</strong> for studios, therapy, or wellbeing spaces</li>
+      <li><strong>Portable meeting rooms</strong>, training spaces, and modular classroom pods</li>
+      <li><strong>Luxury interior finishes</strong> including high-spec fabrics, vinyl flooring, and LED lighting</li>
+      <li><strong>Single-phase or three-phase electrics</strong>, custom sockets, and heating installations</li>
+      <li><strong>Clad containers</strong> for enhanced appearance and insulation performance</li>
+    </ul>
+
+    <p>Our container buildings are ideal for entrepreneurs, SMEs, construction companies, education providers, wellness brands, and corporate HQs. Every unit is designed with durability, comfort, and professional appearance in mind.</p>
+
+    <h2>Popular search terms:</h2>
+    <p>shipping container conversions UK, portable buildings for sale, container offices, converted shipping containers, container meeting rooms, modular site buildings, Scunthorpe portable buildings, Yorkshire container conversions, Lincolnshire shipping containers, Humberside portable offices, soundproof container rooms, acoustic container studios, bespoke site cabins, luxury portable workspace, high-spec container conversion.</p>
+
+  </div>
+</html>
